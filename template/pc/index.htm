@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<title>{eyou:global name='web_title' /}</title>
+	<meta charset="UTF-8">
+	<meta name="Keywords" content="{eyou:global name='web_keywords' /}">
+	<meta name="Description" content="{eyou:global name='web_description' /}">
+	<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta charset="utf-8">
+	<link href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/base.css" rel="stylesheet">
+	<link href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/swiper.min.css" rel="stylesheet">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/baseMobile.css" media="screen and (max-width: 750px)">
+	<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery-1.9.1.min.js"></script>
+	<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/resource.js"></script>
+	<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery.slides.js"></script>
+	<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/weixin.js"></script>
+	<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/swiper.min.js"></script>
+	<style type="text/css">
+		@media only screen and (max-width: 750px) {
+			.statement-add {
+				text-align: left !important;
+			}
+
+			.statement-add a {
+				margin-left: 22px;
+			}
+
+			.statement-add img {
+				position: absolute;
+			}
+
+			.helper {
+				padding: 0;
+				display: -webkit-box;
+				margin-bottom: 6px;
+			}
+
+			.helper .mod {
+				margin-right: 0;
+				display: block;
+				-webkit-box-flex: 1;
+			}
+
+			.footer .mod.phone-active ul {
+				display: block;
+				border-bottom: 1px solid #2D95B4;
+			}
+
+			.footer .mod.phone-active ul li {
+				display: block;
+				border-bottom: 1px solid #DBE5F1;
+			}
+
+			.footer .mod.phone-active ul li:last-child {
+				border-bottom: none;
+			}
+
+			.helper .mod.phone-active h4 {
+				box-shadow: inset 0 4px 0 0px#2D95B4;
+				background-color: #EAF5F8;
+			}
+
+			.helper .mod ul {
+				line-height: 29px;
+				display: none;
+			}
+
+			.helper .mod h4 {
+				float: none;
+				padding: 12px 0;
+			}
+
+			.feedback table,
+			.feedback2 table {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			.feedback select[multiple],
+			.feedback2 select[multiple] {
+				max-width: 100%;
+			}
+
+			.feedback textarea,
+			.feedback2 textarea {
+				max-width: 100%;
+			}
+
+			.header.phone-active {
+				bottom: 0;
+			}
+
+			.article-text a {
+				text-decoration: underline;
+				margin: 15px 2px;
+				line-height: 30px;
+			}
+
+			.article-text a[class*="button"] {
+				text-decoration: none;
+			}
+
+			#goToTop {
+				bottom: 80px !important;
+				margin-bottom: 0;
+			}
+
+			.wechat {
+				position: relative;
+			}
+
+			.feedback input[type="text"],
+			.feedback textarea,
+			.feedback2 input[type="text"],
+			.feedback2 textarea {
+				height: 36px !important;
+			}
+
+			.feedback input,
+			.feedback textarea,
+			.feedback2 input,
+			.feedback2 textarea {
+				height: initial !important;
+			}
+		}
+
+		@media only screen and (max-width: 330px) {
+			.helper {
+				font-size: 14px;
+			}
+		}
+	</style>
+	<style type="text/css">
+		.dnb-index-mask {
+			position: fixed;
+			background: rgba(0, 0, 0, 0.26);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			z-index: 2000;
+			display: none;
+		}
+
+		.dnb-pop-wrapper {
+			position: fixed;
+			top: 8%;
+			left: 0;
+			width: 100%;
+			z-index: 10000;
+		}
+
+		.dnb-pop {
+			background: #FFF;
+			margin: 0 auto;
+			width: 440px;
+			max-width: 95%;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.33);
+			display: none;
+			box-sizing: border-box;
+			/*opacity: 0;*/
+		}
+
+		.dnb-pop-content {
+			padding: 15px;
+			padding-top: 20px;
+			font-size: 16px;
+		}
+
+		.dnb-pop a {
+			color: #2d95b4;
+			text-decoration: underline;
+		}
+
+		.dnb-pop hr {
+			margin-bottom: 10px;
+			height: 0;
+			border-style: solid;
+			border-color: #2D95B4;
+			width: 100%;
+		}
+
+		.dnb-pop-title {
+			margin-bottom: 15px;
+			width: 90%;
+			float: left;
+		}
+
+		.dnb-pop-title input[type="checkbox"] {
+			margin-right: 5px;
+			top: -1px;
+			position: relative;
+		}
+
+		.dnb-pop-head {
+			/*overflow: hidden;*/
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+
+		.dnb-pop-head .dnb-pop-close {
+			float: right;
+			color: #2d95b4;
+			text-decoration: none;
+			display: inline-block;
+			width: 20px;
+			text-align: center;
+			line-height: 20px;
+			margin-top: -15px;
+			margin-right: -10px;
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 50%;
+			height: 20px;
+			color: #fff;
+			font-size: 14px;
+		}
+
+		.dnb-pop-text {
+			color: #333;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+
+		.dnb-pop-content ul {
+			list-style: initial;
+			margin-left: 1.4em;
+			list-style-type: square;
+		}
+
+		.dnb-pop-action {
+			padding: 10px;
+			padding-top: 0;
+		}
+
+		a.dnb-pop-btn {
+			display: block;
+			background: #ccc;
+			border-radius: 2px;
+			line-height: 38px;
+			text-align: center;
+			color: #fff;
+			font-size: 16px;
+			text-decoration: none;
+			cursor: not-allowed;
+		}
+
+		a.dnb-pop-btn.active {
+			background: #2D95B4;
+			cursor: pointer;
+		}
+
+		.dnb-pop-head:before,
+		.dnb-pop-head:after {
+			display: table;
+			content: '';
+			clear: both;
+		}
+
+		.phone {
+			display: none;
+		}
+
+		@media only screen and (max-width:750px) {
+			.pc {
+				display: none;
+			}
+
+			.phone {
+				display: block;
+			}
+
+			.phone-mob {
+				position: relative;
+				top: -47px;
+				right: 15px;
+				color: #015171;
+			}
+
+			.phone-mob .tellphone {
+				padding-right: 6px;
+			}
+
+			.phone-mob .cta_text {
+				text-decoration: underline;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {}
+
+		.dnbhome .header .top h2.logo {
+			position: relative;
+
+		}
+
+		.dnbhome .header .top-extra {
+			padding-right: 0;
+		}
+
+		.dnbhome .header .top-extra .btn2 {
+			display: none;
+		}
+
+
+		@media only screen and (max-width: 768px) {
+			.dnbhome .header .top-extra .hdbc10logo {
+				display: none !important;
+			}
+
+			.dnbhome .header .top h2.logo {
+				position: fixed;
+				top: 0px;
+			}
+		}
+
+
+	</style>
+	<style type="text/css">
+		@media (max-width: 767px) {
+			.slide-container {
+				width: auto
+			}
+		}
+
+		/* For smartphones */
+		@media (max-width: 480px) {
+			.slide-container {
+				width: auto
+			}
+		}
+
+		/* For smaller displays like laptops */
+		@media (min-width: 768px) and (max-width: 979px) {
+			.slide-container {
+				width: 724px
+			}
+		}
+
+		/* For larger displays */
+		@media (min-width: 1200px) {
+			.slide-container {
+				width: 1020px;
+				overflow: hidden;
+				max-height: 390px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.slidesjs-control img {
+			width: 100%;
+		}
+
+		.slidesjs-navigation,
+		.slidesjs-pagination {
+			display: none !important;
+		}
+	</style>
+	
+</head>
+
+<body class="dnbhome">
+	<div class="wrapper">
+		<div class="shell">
+			<div class="right-shadow">
+				<div class="left-shadow">
+
+					<!-- header -->
+					<style type="text/css">
+						.nav-bd .phone {
+							background: none;
+						}
+
+						.nav-bd .phone1 {
+							padding: 0;
+							display: inline;
+						}
+
+						.statement-add {
+							text-align: right;
+						}
+
+						.statement-add a {
+							float: right;
+							color: #333;
+							font-size: 14px;
+						}
+
+						.statement-add a:hover {
+							color: #2d95b4;
+							text-decoration: none;
+						}
+					</style>
+					<!--header-->
+					{eyou:include file="header.htm" /}
+				
+					<!-- /header -->
+					<!-- ************************ -->
+
+					<div class="content">
+						<style>
+							.swiper-container {
+								width: 100%;
+								height: 100%;
+
+							}
+
+							.swiper-slide {
+								text-align: center;
+								font-size: 18px;
+								background: #fff;
+
+								/* Center slide text vertically */
+								display: -webkit-box;
+								display: -ms-flexbox;
+								display: -webkit-flex;
+								display: flex;
+								-webkit-box-pack: center;
+								-ms-flex-pack: center;
+								-webkit-justify-content: center;
+								justify-content: center;
+								-webkit-box-align: center;
+								-ms-flex-align: center;
+								-webkit-align-items: center;
+								align-items: center;
+							}
+						</style>
+						<div class="col hero">
+							<div class="hero-main">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										{eyou:adv pid='1'}
+										<div class="swiper-slide"><a href="{$field.links}" target="_blank"><img src="{$field.litpic}" alt></a></div>		
+										{/eyou:adv}
+									</div>
+									<div class="swiper-pagination"></div>
+							
+								</div>
+								<script>
+									var swiper = new Swiper('.swiper-container', {
+										spaceBetween: 30,
+										centeredSlides: true,
+										autoplay: {
+											delay: 4500,
+											disableOnInteraction: false,
+										},
+										pagination: {
+											el: '.swiper-pagination',
+											clickable: true,
+										},
+									});
+									
+								</script>
+								<div class="hero-secondary">
+									<div class="hero-secondary-wrap clearfix">
+										{eyou:type typeid='2' type='self' addfields='content'}
+										<a href="{$field.typeurl}" target="_blank">
+											<div class="hero-secondary-item">
+												<h2>{$field.typename}</h2>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$field.content|html_msubstr=###,0,120}...
+													<br>
+													<br>
+												</p>
+												<p style="text-align:right;"><span class="cta_text">了解更多</span></p>
+											
+											</div>
+										</a>
+										{/eyou:type}
+										{eyou:type typeid='3' type='self' addfields='content'}
+										<a href="{$field.typeurl}" target="_blank" class="pc">
+											<div class="hero-secondary-item">
+												<h2>{$field.typename}</h2>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$field.content|html_msubstr=###,0,120}...
+													<br>
+													<br>
+												</p>
+												<p style="text-align:right;"> <span
+														class="cta_text">了解更多</span></p>
+											</div>
+										</a>
+										{/eyou:type}
+										
+										{eyou:type typeid='33' type='self' addfields='content'}
+										<a href="{$field.typeurl}" target="_blank">
+											<div class="hero-secondary-item">
+												<h2>我们的优势</h2>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$field.content|html_msubstr=###,0,120}...
+													<br>
+													<br>
+												</p>
+												<p style="text-align:right;"><span class="cta_text">了解更多</span></p>
+											</div>
+										</a>
+										{/eyou:type}
+									</div>
+								</div>
+							</div>
+							<!-- /hero -->
+
+							<div class="col business">
+								<div class="mod">
+									<div id="J_BusinessCarousel" class="business-carousel">
+										<div class="slides_pager">
+											<ul class="clearfix">
+												<li><s></s>资质认证审核</li>
+												<li><s></s>商户认证审核</li>
+												<li><s></s>内容信息审核</li>
+												<li><s></s>敬请期待</li>
+											
+											</ul>
+										</div>
+
+										<ul class="slides_container">
+											{eyou:type typeid='37' type='self' }
+											<li style=" background:#eaf5f8;">
+												<h2>{$field.typename}</h2>
+												<p>{$field.seo_description}
+												</p>
+												<a href="{$field.typeurl}" class="btn"
+												target="_blank"><span>了解更多</span></a>
+											</li>
+											{/eyou:type}
+
+											{eyou:type typeid='38' type='self' }
+											<li>
+												<h2>{$field.typename}</h2>
+												<p> {$field.seo_description}
+												</p>
+												<a href="{$field.typeurl}" class="btn"
+													target="_blank"><span>了解更多</span></a>
+											</li>
+											{/eyou:type}
+
+											{eyou:type typeid='39' type='self' }
+											<li style=" background:#eaf5f8;">
+												<h2>{$field.typename}</h2>
+												<p>
+													{$field.seo_description}
+												</p>
+												<a href="{$field.typeurl}" class="btn"
+													target="_blank"><span>了解更多</span></a>
+											</li>
+										{/eyou:type}
+										{eyou:type typeid='40' type='self' }
+											<li>
+												<h2>{$field.typename}</h2>
+												<p>
+													{$field.seo_description}
+												</p>
+												<a href="{$field.typeurl}" class="btn"
+													target="_blank"><span>了解更多</span></a>
+											</li>
+										{/eyou:type}	
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /business -->
+
+						
+							<!-- /introduction -->
+
+							<div class="col news clearfix">
+								<div class="mod mod-a">
+									{eyou:type typeid='34' type='self' }
+									<div class="mod-wrap">
+										<h3 class="hd">{$field.typename}</h3>
+								<span style="font-size: 16px;line-height: 30px;"> {$field.seo_description|html_msubstr=###,0,105}...
+								</span>		
+										<div class="ft">
+											<a href="{$field.typeurl}" target="_blank">查看更多...</a>
+										</div>
+									</div>
+									{/eyou:type}	
+								</div>
+
+								<div class="mod mod-b">
+									{eyou:type typeid='33' type='self' }
+									<div class="mod-wrap">
+										<h3 class="hd">{$field.typename}</h3>
+										<span style="font-size: 16px;line-height: 30px;">{$field.seo_description|html_msubstr=###,0,105}...
+										</span>		
+									<div class="ft">
+											<a href="{$field.typeurl}" target="_blank">查看更多...</a>
+										</div>
+									</div>
+									{/eyou:type}	
+								</div>
+
+								<div class="mod mod-c">
+									{eyou:channelartlist typeid='25'}
+									<div class="mod-wrap">
+										<h3 class="hd">{eyou:field name='typename' /}</h3>
+										<ul class="bd" >
+											{eyou:arclist row='6' titlelen='30' }
+											<li ><a href="{$field.arcurl}" title="{$field.typename}" target="_blank">·&nbsp;&nbsp;{$field.title}</a></li>
+											{/eyou:arclist}
+										</ul>
+										<div class="ft">
+											<a href="{eyou:field name='typeurl' /}" title="" target="_blank">查看更多...</a>
+										</div>
+									</div>
+									{/eyou:channelartlist}
+								</div>
+							</div>
+							<!-- /news -->
+					
+						</div>
+						<!-- /content -->
+
+						<!-- ************************ -->
+						<!-- footer -->
+						{eyou:include file="footer.htm" /}
+						 <!-- /footer -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+		<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery.slides.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(window).on('click', function (e) {
+				if ($(".dnb-pop").length >= 0) {
+					var $target = $(e.target);
+					if ($target.parents('.dnb-pop').length <= 0) {
+						$('.dnb-pop,.dnb-index-mask').hide();
+					}
+				}
+			});
+			$(".index_pop_cn").on('click', function () {
+				$('#index_pop_cn,.dnb-index-mask').show();
+				return false;
+			})
+			$(".index_pop_en").on('click', function () {
+				$('#index_pop_en,.dnb-index-mask').show();
+				return false;
+			})
+			$('.dnb-pop-close').on('click', function () {
+				$(this).closest('.dnb-pop').hide();
+				$('.dnb-index-mask').hide();
+			})
+			$('.dnb-pop-head input').change(
+				function () {
+					if ($(this).is(':checked')) {
+						$(this).closest('.dnb-pop').find('.dnb-pop-btn').addClass('active');
+					} else {
+						$(this).closest('.dnb-pop').find('.dnb-pop-btn').removeClass('active');
+					}
+				}
+			)
+		
+		</script>
+		<script>
+			$(function () {
+				$('#slides').slidesjs({
+					width: 1020,
+					height: 390,
+					play: {
+						active: true,
+						auto: true,
+						interval: 4000,
+						swap: true,
+						pagination: false,
+						generatePagination: false
+					}
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>

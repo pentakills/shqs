@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>{$eyou.field.seo_title}</title>
+    <meta name="Keywords" content="{$eyou.field.seo_keywords}">
+    <meta name="Description" content="{$eyou.field.seo_description}">
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta charset="utf-8">
+    <link href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/base.css" rel="stylesheet">
+    <link href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/swiper.min.css" rel="stylesheet">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/shqs/css/baseMobile.css"
+        media="screen and (max-width: 750px)">
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery-1.9.1.min.js"></script>
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/resource.js"></script>
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery.slides.js"></script>
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/weixin.js"></script>
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/swiper.min.js"></script>
+    <style type="text/css">
+        .expand-navigation {
+            background-color: #eaf5f8;
+            opacity: 0.9;
+        }
+
+        @media only screen and (max-width: 750px) {
+            .statement-add {
+                text-align: left !important;
+            }
+
+            .statement-add a {
+                margin-left: 22px;
+            }
+
+            .statement-add img {
+                position: absolute;
+            }
+
+            .helper {
+                padding: 0;
+                display: -webkit-box;
+                margin-bottom: 6px;
+            }
+
+            .helper .mod {
+                margin-right: 0;
+                display: block;
+                -webkit-box-flex: 1;
+            }
+
+            .footer .mod.phone-active ul {
+                display: block;
+                border-bottom: 1px solid #2D95B4;
+            }
+
+            .footer .mod.phone-active ul li {
+                display: block;
+                border-bottom: 1px solid #DBE5F1;
+            }
+
+            .footer .mod.phone-active ul li:last-child {
+                border-bottom: none;
+            }
+
+            .helper .mod.phone-active h4 {
+                box-shadow: inset 0 4px 0 0px#2D95B4;
+                background-color: #EAF5F8;
+            }
+
+            .helper .mod ul {
+                line-height: 29px;
+                display: none;
+            }
+
+            .helper .mod h4 {
+                float: none;
+                padding: 12px 0;
+            }
+
+            .feedback table,
+            .feedback2 table {
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            .feedback select[multiple],
+            .feedback2 select[multiple] {
+                max-width: 100%;
+            }
+
+            .feedback textarea,
+            .feedback2 textarea {
+                max-width: 100%;
+            }
+
+            .header.phone-active {
+                bottom: 0;
+            }
+
+            .article-text a {
+                text-decoration: underline;
+                margin: 15px 2px;
+                line-height: 30px;
+            }
+
+            .article-text a[class*="button"] {
+                text-decoration: none;
+            }
+
+            #goToTop {
+                bottom: 80px !important;
+                margin-bottom: 0;
+            }
+
+            .wechat {
+                position: relative;
+            }
+
+            .feedback input[type="text"],
+            .feedback textarea,
+            .feedback2 input[type="text"],
+            .feedback2 textarea {
+                height: 36px !important;
+            }
+
+            .feedback input,
+            .feedback textarea,
+            .feedback2 input,
+            .feedback2 textarea {
+                height: initial !important;
+            }
+        }
+
+        @media only screen and (max-width: 330px) {
+            .helper {
+                font-size: 14px;
+            }
+        }
+    </style>  
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="shell">
+            <div class="right-shadow">
+                <div class="left-shadow">
+
+
+                    <!-- header -->
+                    <style type="text/css">
+                        .nav-bd .phone {
+                            background: none;
+                        }
+
+                        .nav-bd .phone1 {
+                            padding: 0;
+                            display: inline;
+                        }
+
+                        .statement-add {
+                            text-align: right;
+                        }
+
+                        .statement-add a {
+                            float: right;
+                            color: #333;
+                            font-size: 14px;
+                        }
+
+                        .statement-add a:hover {
+                            color: #2d95b4;
+                            text-decoration: none;
+                        }
+                    </style>
+                   <div class="header">
+                    {eyou:include file="header.htm" /}
+
+                </div>
+                    <!-- /header -->
+                    <!-- ************************ -->
+
+                    <!-- content -->
+                    <div class="content">
+
+                        <div class="head">
+                            <div class="col">
+                                <div class="mod">
+                                    <p>{eyou:position style="crumb" /}</p>
+                                    <h1 class="my_id">{$eyou.field.ptypename}</h1>
+                                    <ul>
+                                        {eyou:channel type="self" }
+                                        <li><a href="{$field.typeurl}">{$field.typename}</a></li>  
+                                        {/eyou:channel}    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="body">
+                            <div class="col">
+                                <div class="mod separate-left clearfix">
+                                    <div class="col-main">
+                                        <h2 class="main-title">{$eyou.field.typename}
+
+                                            <div class="separate-dashed"></div>
+
+                                            <div class="news-list">
+                                                <ul id="divFor">
+                                                    {eyou:list pagesize="8" titlelen="30"}
+                                                    <li>
+                                                        <h3><span></span><a
+                                                                href="{$field.arcurl}">{$field.title}</a>
+                                                        </h3>
+                                                        <p>{$field.seo_description}</p>
+                                                    </li>
+                                                    {/eyou:list}
+                                                </ul>
+
+                                                <div class="separate-dashed"></div>
+
+                                                <div id="divPage" class="pages">
+                                                    {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}
+                                                </div>
+                                            </div>
+                                        </h2>
+                                    </div><!-- /col-main -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /content -->
+
+
+                    <!-- ************************ -->
+                    <!-- footer -->
+                    {eyou:include file="footer.htm" /}
+                    <!-- /footer -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页面加载-->
+    <script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/collect.js"></script>
+    <script>
+        clab_tracker.ready(function () {
+            //		    var $title=document.title;
+            var $id = window.location.href;
+            var $mytitle = $('.my_id').text();
+            $id = $id.substr(22).replace(/.html/, "").replace(/\//g, "").replace(/-/g, "");
+            var $title = "" + $mytitle;
+            //			alert($title);
+            this.push({});
+            this.track("open_page", $title, $id, { tag: $mytitle });
+        })
+    </script>
+</body>
+
+</html>

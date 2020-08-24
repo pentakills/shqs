@@ -1,0 +1,97 @@
+<div class="header">
+  <div id="J_Sticky" class="sticky">
+    <div class="col nav clearfix">
+      
+    </div>
+    <div class="statement-add" style="background-color: #006BA5;width: 255px; height: 30px;float: right;line-height: 30px;padding-right: 10px;"><a href="{eyou:global name='web_basehost' /}" style="color: #fff;">{eyou:global name='web_name' /}</a></div>
+    <div class="col top clearfix" style="clear:both;">
+      <h2 class="logo"><a href="{eyou:global name='web_basehost' /}" title="{eyou:global name='web_name' /}">{eyou:global name='web_name' /}</a></h2>
+
+    
+    </div>
+  </div>
+
+  <div class="col nav clearfix">
+
+  </div>
+  <div class="statement-add" style="background-color: #006BA5;width: 255px; height: 30px;float: right;line-height: 30px;padding-right: 10px;"><a
+      href="{eyou:global name='web_basehost' /}" style="color: #fff;">{eyou:global name='web_name' /}</a></div>
+  <div class="col top clearfix" style="clear:both;">
+    <h2 class="logo"><a href="{eyou:global name='web_basehost' /}" title="{eyou:global name='web_name' /}">{eyou:global name='web_name' /}</a></h2>
+
+    
+  </div>
+
+  <div id="J_Navigation" class="col navigation">
+    <ul class="clearfix">
+      <li class="expand" style="margin-right: 135px;"><a href="{eyou:global name='web_cmsurl' /}/" title="首页">首页</a><s></s></li>
+      {eyou:channel type="top" row="6" id="field" }
+      <li class="expand" style="margin-right: 135px;"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a><s></s></li>
+      {/eyou:channel}
+      
+    </ul>
+
+    <div id="J_ExpandNavigation" class="col expand-navigation">
+      <div class="expand-item clearfix">
+        <div class="fl" style="width: 170px;border-right: 1px solid #006BA5;text-indent: 15px; height: 115px;">
+          <dl>		
+            <dd><a href="{eyou:global name='web_cmsurl' /}">
+              <img src="{eyou:global name='web_templets_pc' /}/skin/shqs/images/sy.png" alt="">
+
+            </a>
+           
+            </dd>
+          </dl>
+        </div>
+        <div class="fl" style="width: 208px;border-right: 1px solid #006BA5;text-indent: 15px;height: 115px;">
+          <dl>		
+            <dd>
+              {eyou:channelartlist typeid='1' }
+              {eyou:channel  type ='son'}
+              <a href="{$field.typeurl}" target="_self" >{$field.typename}</a>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+            </dd>
+          </dl>
+        </div>
+        <div class="fl" style="width: 225px;border-right: 1px solid #006BA5;text-indent: 15px;height: 115px;">
+          <dl>		
+            <dd>
+              {eyou:channelartlist typeid='18' }
+              {eyou:channel  type ='son'}
+              <a href="{$field.typeurl}" target="_self" >{$field.typename}</a>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+              
+            </dd>
+          </dl>
+        </div>
+        <div class="fl" style="width: 208px;border-right: 1px solid #006BA5;text-indent: 15px;height: 115px;">
+          <dl>		
+            <dd>
+              {eyou:channelartlist typeid='16' }
+              {eyou:channel  type ='son'}
+              <a href="{$field.typeurl}" target="_self" >{$field.typename}</a>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+              
+            </dd>
+          </dl>
+        </div>
+        <div class="fl" style="width: 200px;text-indent: 15px;height: 115px;">
+          <dl>		
+            <dd>
+              {eyou:channelartlist typeid='17' }
+              {eyou:channel  type ='son'}
+              <a href="{$field.typeurl}" target="_self" >{$field.typename}</a>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /navigation -->
+</div>

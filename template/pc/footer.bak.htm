@@ -1,0 +1,65 @@
+<div class="w-container w-footer">
+  <div class="w-footer-section pdTop-default pdBottom-default" >
+  	<div class="w-footer-in" style="max-width:;">
+  	<div style="border-bottom: 1px solid #fff;">
+            <ul style="list-style-type: none;">
+              <li style="width: 120px;height: 50px;line-height: 50px;font-size: 14px;text-align: center;padding: 0 5px 0 0;float: left;list-style-type: none;">
+              	<a href="{eyou:global name='web_cmsurl' /}/">网站首页</a>
+              </li>
+              {eyou:channel type="top" row="8" id="field" currentstyle="active"}
+              <li style="width: 120px;height: 50px;line-height: 50px;font-size: 14px;text-align: center;padding: 0 5px 0 0;float: left;list-style-type: none;">
+              	<a href="{$field.typeurl}">{$field.typename}</a>
+              </li>
+              {/eyou:channel}
+            </ul>
+            <div style="clear: both;"></div>
+          </div>
+          </div>
+    <div class="w-footer-in" style="max-width:;">
+      <div class="foot-mask" ></div>
+      <div class="w-foot-content  pdTop-small pdBottom-small" >
+        <div class="li-div lf" style="">
+          <div class="w-text"  style="margin-top: 10px;">
+            <div align="left">{$global.web_copyright|htmlspecialchars_decode}--技术支持：<a href="http://www.0917bjms.com/">麦思科技</a>&nbsp; {eyou:global name='web_recordnum' /}<br />
+              {eyou:global name='web_attr_5' /}<br />
+              {eyou:global name='web_attr_6' /}<br />
+                                    网址:{eyou:global name='web_basehost' /}<br />
+                                    
+            </div>
+          </div>
+        </div>
+        <div class="li-div rg" style="">
+          <div class="w-text"  style="">
+            <ul>
+      
+          <li style="float: left;width: 80px;margin-right: 3%;list-style: none;text-align: center;"> <img src="{eyou:global name='web_attr_3' /}" alt="{eyou:global name='web_name' /}" width="80" height="80">&nbsp;&nbsp;<span style="text-align: center; font-size: 80%;">关注公众号</span> </li>
+          <!-- <li style="float: left;width: 80px;margin-right: 3%;list-style: none;"> <img src="{eyou:global name='web_attr_3' /}" alt="{eyou:global name='web_name' /}" width="80" height="80"><span style="text-align: center; font-size: 80%;">关注企业微信</span> </li> -->
+          <li style="float: left;width: 80px;margin-right: 3%;list-style: none;  text-align: center;"> <img src="{eyou:global name='web_attr_7' /}" alt="{eyou:global name='web_name' /}" width="80" height="80">&nbsp;&nbsp;<span style="text-align: center; font-size: 80%;">关注抖音号</span> </li>
+        </ul>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-service-fixed">
+    <div class="service-item bg_s_default color_s_default aHoverbg_deepen aHovercolor_deepen service-item-top"> <i class="fa fa-caret-up"></i>
+      <div class="top" onclick="$('body,html').animate({scrollTop: 0}, 'normal');">TOP</div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) {
+                    $('.w-service-fixed .service-item-top').show();
+                } else {
+                    $('.w-service-fixed .service-item-top').hide();
+                }
+            });
+        });
+    </script> 
+  </div>
+</div>
+{eyou:global name='web_thirdcode_pc' /} 
+<!-- 应用插件标签 start --> 
+{eyou:weapp type='default' /} 
+<!-- 应用插件标签 end -->

@@ -1,0 +1,164 @@
+<div class="footer">
+  <div class="col helper clearfix">
+    <div class="mod mod-a">
+      {eyou:channelartlist typeid='1' }
+      <h4>{eyou:field name='typename' /}</h4>
+      <ul>
+        {eyou:channel  type ='son'}
+        <li><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+    
+      {/eyou:channelartlist}
+    </div>
+
+    <div class="mod mod-b">
+      {eyou:channelartlist typeid='18' }
+      <h4>{eyou:field name='typename' /}</h4>
+      <ul>
+        {eyou:channel  type ='son'}
+        <li><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+      {/eyou:channelartlist}
+    </div>
+
+    <div class="mod mod-c">
+      {eyou:channelartlist typeid='16' }
+      <h4>{eyou:field name='typename' /}</h4>
+      <ul>
+        {eyou:channel  type ='son'}
+        <li><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+      {/eyou:channelartlist}
+    </div>
+
+    <div class="mod mod-d">
+      {eyou:channelartlist typeid='17' }
+      <h4>{eyou:field name='typename' /}</h4>
+      <ul>
+        {eyou:channel  type ='son'}
+        <li><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+      {/eyou:channelartlist}
+    </div>
+    
+  </div><!-- /helper -->
+
+
+
+  <div class="col copyright clearfix">
+    <div id="code" class="wechat"><img src="{eyou:global name='web_attr_3' /}" width="43" height="43"
+        alt="微信">
+      <div id="code_img"><img src="{eyou:global name='web_attr_7' /}" width="270" height="222"
+          alt="微信"></div>
+    </div>
+    <div id="code2" class="wechat"><img src="{eyou:global name='web_attr_8' /}" width="43" height="43"
+      alt="抖音">
+    <div id="code_img2"><img src="{eyou:global name='web_attr_9' /}" width="270" height="222"
+        alt="抖音"></div>
+    </div>
+  
+
+    <div class="disclaimer">
+      <p>友情链接：
+        {eyou:flink type='text' row='30' titlelen='15'}
+        <a href="{$field.url}" target="_blank">{$field.title}</a>&nbsp;&nbsp;&nbsp;
+        {/eyou:flink}
+      </p>
+      <p><span>{$global.web_copyright|htmlspecialchars_decode}--技术支持：<a href="http://www.0917bjms.com/">麦思科技</a>&nbsp;</span>
+        <span class="copy"> {eyou:global name='web_recordnum' /}</span> </p>
+    </div>
+  </div><!-- /copyright -->
+</div>
+
+
+<div class="tongji">
+  <style type="text/css">
+    .copyright span {
+      padding-right: 10px;
+      display: inline-block;
+    }
+
+    .copyright .copy {
+      padding-right: 8px;
+    }
+
+    @media screen and (max-width: 720px) {
+      .copyright .bah {
+        display: initial;
+      }
+
+      .copy {
+        display: inline-block;
+      }
+    }
+  </style>
+  <!-- GA code -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-67053667-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- /GA code -->
+  <script type="text/javascript">
+    $(".nav-btn,.corner").on('click', function () {
+      $('.header').toggleClass('phone-active');
+    })
+    $('body').on('click', function (e) {
+      if ($('.header').hasClass('phone-active')) {
+        var $target = $(e.target);
+        if ($target.parents('.header').length <= 0) {
+          $('.header').removeClass('phone-active');
+        }
+      }
+      if ($('.footer .mod.phone-active').length > 0) {
+        var $target = $(e.target);
+        if ($target.parents('.helper').length <= 0) {
+          $('.footer .mod').removeClass('phone-active');
+        }
+      }
+      if ($('.footer .wechat.phone-active').length > 0) {
+        var $target = $(e.target);
+        if ($target.parents('.wechat').length <= 0) {
+          $('.footer .wechat').removeClass('phone-active').find('#code_img').hide();
+        }
+      }
+    });
+    $(function () {
+      if ($('.head').find('ul').length > 0) {
+        $('.head').addClass('has-child');
+      }
+      $('.footer .wechat').on('click', function () { if ($(this).hasClass('phone-active')) { $('.footer .wechat').find('#code_img').toggle(); } else { $(this).addClass('phone-active').find('#code_img').show(); } })
+      $('.head.has-child h1,.head.has-child h2').on('click', function () { $('.head.has-child').toggleClass('phone-active'); })
+      $('.footer .mod').on('click', function () { if ($(this).hasClass('phone-active')) { $(this).toggleClass('phone-active'); } else { $('.footer .mod').removeClass('phone-active'); $(this).addClass('phone-active'); } })
+    })
+  </script>
+
+</div>
+<div id="J_BusinessCarousel"></div>
+<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/jquery.jcarousel.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/global.js"></script>
+
+<script src="{eyou:global name='web_templets_pc' /}/skin/shqs/js/collect.js"></script>
+<script>
+  clab_tracker.ready(function () {
+    this.push({});
+    this.track("c_open_page", " ");
+  })
+</script>
+<script src="js/collect.js"></script>
+<script>
+  clab_tracker.ready(function () {
+    this.push({ "pageType": "web" });
+    this.track("open_page", {});
+  });
+
+</script>
